@@ -1,0 +1,85 @@
+{
+
+	"inbounds": [{
+
+		"listen": "0.0.0.0",
+
+		"port": 10810,
+
+		"protocol": "shadowsocks",
+
+		"settings": {
+
+			"method": "chacha20",
+
+			"password": "sspasswd"
+
+		}
+
+	}, {
+
+		"port": 10808,
+
+		"listen": "0.0.0.0",
+
+		"protocol": "socks",
+
+		"sniffing": {
+
+			"enabled": true,
+
+			"destOverride": ["http", "tls"]
+
+		},
+
+		"settings": {
+
+			"auth": "noauth",
+
+			"udp": false
+
+		}
+
+	}],
+
+	"outbounds": [{
+
+		"protocol": "vmess",
+
+		"settings": {
+
+			"vnext": [{
+
+				"address": "data.dgunbe.top",
+
+				"port": 443,
+
+				"users": [{
+
+					"id": "b50a007e-b539-4436-9cb2-fdde80f31b6f",
+
+					"alterId": 0
+
+				}]
+
+			}]
+
+		},
+
+		"streamSettings": {
+
+			"network": "ws",
+
+			"security": "tls",
+
+			"wsSettings": {
+
+				"path": "/jR0f8I"
+
+			}
+
+		}
+
+	}]
+
+}
